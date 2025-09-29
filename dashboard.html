@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MainTix - User Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <!-- Google Fonts: Orbitron for tech style -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="background">
+
+    <!-- Big Title -->
+    <header class="dashboard-title">
+      <h1>MAINTIX</h1>
+
+      <!-- New Tabs Navigation -->
+      <nav class="nav-tabs">
+        <button id="navRooms" class="tab-btn">Rooms</button>
+        <button id="navRequests" class="tab-btn">Requests</button>
+      </nav>
+    </header>
+
+    <main class="rooms-section">
+      <h2>Computer Labs</h2>
+      <div class="rooms-grid">
+        <div class="room-card">
+          <img src="https://via.placeholder.com/150?text=ITS+200" alt="ITS 200" />
+          <button>ITS 200</button>
+        </div>
+        <div class="room-card">
+          <img src="https://via.placeholder.com/150?text=ITS+201" alt="ITS 201" />
+          <button>ITS 201</button>
+        </div>
+        <div class="room-card">
+          <img src="https://via.placeholder.com/150?text=MAC+Lab" alt="MAC Lab" />
+          <button>MAC Lab</button>
+        </div>
+        <div class="room-card">
+          <img src="https://via.placeholder.com/150?text=PTC+303" alt="PTC 303" />
+          <button>PTC 303</button>
+        </div>
+        <div class="room-card">
+          <img src="https://via.placeholder.com/150?text=PTC+304" alt="PTC 304" />
+          <button>PTC 304</button>
+        </div>
+        <div class="room-card">
+          <img src="https://via.placeholder.com/150?text=PTC+305" alt="PTC 305" />
+          <button>PTC 305</button>
+        </div>
+        <div class="room-card">
+          <img src="https://via.placeholder.com/150?text=PTC+306" alt="PTC 306" />
+          <button>PTC 306</button>
+        </div>
+      </div>
+    </main>
+
+    <section class="request-section">
+      <h2>Requests</h2>
+      <p>No requests submitted yet.</p>
+    </section>
+
+    <!-- Profile at bottom left fixed -->
+    <aside class="profile-sidebar" id="profileSidebar">
+      <div class="profile-circle" id="profileCircle">U</div>
+      <span id="profileName">Upang</span>
+    </aside>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

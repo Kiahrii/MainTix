@@ -1,0 +1,247 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1b3a1a;
+}
+
+/* Background same as login page */
+.background {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  padding: 32px 16px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Big Title */
+.dashboard-title {
+  margin-bottom: 24px;
+  user-select: none;
+  text-align: center;
+}
+
+.dashboard-title h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  color: #2e7d32;
+  letter-spacing: 3.2px;
+  text-shadow: 2px 2px 6px rgba(76, 175, 80, 0.7);
+  margin-bottom: 8px;
+}
+
+/* New nav tabs below the title */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 30px;
+  margin-bottom: 41px;
+  user-select: none;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 21.6px;
+  font-weight: 500;
+  color: #1b3a1a;
+  cursor: pointer;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  background-color: #2e7d32;
+  transition: width 0.4s ease;
+  border-radius: 3px;
+}
+
+.tab-btn:hover::after {
+  width: 100%;
+}
+
+.tab-btn.active {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.tab-btn.active::after {
+  width: 100%;
+}
+
+/* Rooms Section */
+.rooms-section {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: block;
+}
+
+.rooms-section:not(.active) {
+  display: none;
+}
+
+.rooms-section h2 {
+  font-size: 28.8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Rooms Grid */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.room-card {
+  background: #ccf5e7;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.room-card img {
+  width: 100%;
+  height: 170px;
+  max-width: 150px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  user-select: none;
+}
+
+.room-card button {
+  background: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.room-card button:hover {
+  background: #388e3c;
+}
+
+.request-section {
+  width: 100%;
+  max-width: 900px;
+  background: #ccf5e7;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  display: none;
+}
+
+.request-section.active {
+  display: block;
+}
+
+.request-section h2 {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.request-section p {
+  font-style: italic;
+  color: #555;
+  font-size: 16px;
+}
+
+.profile-sidebar {
+  position: absolute;
+  top: 43px;
+  left: 43px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  user-select: none;
+}
+
+.profile-circle {
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profileName {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1b3a1a;
+  white-space: nowrap;
+}
+
+.rooms-section,
+.request-section {
+  min-height: 500px; /* Adjust this based on how tall the Rooms section usually is */
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .dashboard-title h1 {
+    font-size: 56px;
+  }
+
+  .nav-tabs {
+    gap: 32px;
+  }
+
+  .tab-btn {
+    font-size: 20.8px;
+  }
+
+  .rooms-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .profile-sidebar {
+    padding: 6px 12px;
+    bottom: 12px;
+    left: 12px;
+  }
+
+  #profileName {
+    font-size: 16px;
+  }
+}
