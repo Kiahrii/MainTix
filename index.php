@@ -6,13 +6,13 @@ include 'config.php';
 if (isset($_POST['register'])) {
     $firstname = trim($connection->real_escape_string($_POST['firstname']));
     $lastname = trim($connection->real_escape_string($_POST['lastname']));
-    $email = trim($connection->real_escape_string($_POST['email']));
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $tin = trim($connection->real_escape_string($_POST['tin']));
     $department = trim($connection->real_escape_string($_POST['department']));
+    $email = trim($connection->real_escape_string($_POST['email']));
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     // CHECKS IF ACCOUNT ALREADY EXISTS
-    $check_sql = "SELECT * FROM user_info WHERE username = '$email' OR  = '$tin'";
+    $check_sql = "SELECT * FROM user_info WHERE username = '$email' OR tin_no = '$tin'";
     $result = $connection->query($check_sql);
 
     if ($result->num_rows > 0) {
